@@ -1,0 +1,5 @@
+name: PlotPlus
+main: me.llamositopia.plotplus.PlotPlus
+version: 1.0
+loadbefore: [Multiverse-Core, Multiworld]
+author: llamositopia
