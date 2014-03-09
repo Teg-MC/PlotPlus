@@ -131,7 +131,7 @@ public class PlotGenerator extends ChunkGenerator {
                 }
             }
         }
-    return result;
+        return result;
     }
   
     protected void setBlock(short[][] result, int x, int y, int z, short blockkid) {
