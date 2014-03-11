@@ -13,6 +13,10 @@ public class PlotGenerator extends ChunkGenerator {
                 for (int csz = 0; csz < 16; csz++){
                     int x = cx*16+csx;
                     int z = cz*16+csz;
+                    if (x<0)
+                        x=-x;
+                    if (z<0)
+                        z=-z;
                     if (y < 64){
                         setBlock(result, csx, y, csz, (short) 3);
                     }else if (y == 64){
@@ -29,7 +33,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>15 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -37,7 +41,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>15 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -53,7 +57,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>15 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -61,7 +65,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>15 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -77,7 +81,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>15 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -85,7 +89,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>15 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -94,37 +98,250 @@ public class PlotGenerator extends ChunkGenerator {
                             }
                         }
                     }else if (y == 68){
-                        if (x%73==3 || x%73==5){
-                            if (z%73>9 && z%5==0){
-                                if (z%10==0){
+                        if (z%73>15){
+                            if (z%10==0){
+                                if (x%73==3){
                                     setBlock(result, csx, y, csz, (short) 89);
-                                }else{
+                                }else if (x%73==4){
+                                    setBlock(result, csx, y, csz, (short) 85);
+                                }else if (x%73==5){
+                                    setBlock(result, csx, y, csz, (short) 89);
+                                }
+                            }else if (z%10==4){
+                                if (x%73==4){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
-                            }
-                        }else if (x%73==4 && z%73>9){
-                            if (x%10==4 || x%10==6){
-                                setBlock(result, csx, y, csz, (short) 18);
-                            }else if (x%10==0){
-                                setBlock(result, csx, y, csz, (short) 85);
-                            }else if (x%10==5){
-                                setBlock(result, csx, y, csz, (short) 17);
-                            }
-                        }else if (z%73==3 || z%73==5){
-                            if (x%73>9 && x%5==0){
-                                if (x%10==0){
-                                    setBlock(result, csx, y, csz, (short) 89);
-                                }else{
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
-                            }
-                        }else if (z%73==4 && x%73>9){
-                            if (z%10==4 || z%10==6){
-                                setBlock(result, csx, y, csz, (short) 18);
-                            }else if (z%10==0){
-                                setBlock(result, csx, y, csz, (short) 85);
                             }else if (z%10==5){
-                                setBlock(result, csx, y, csz, (short) 17);
+                                if (x%73==3){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (x%73==4){
+                                    setBlock(result, csx, y, csz, (short) 17);
+                                }else if (x%73==5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==6){
+                                if (x%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                        if (x%73>15){
+                            if (x%10==0){
+                                if (z%73==3){
+                                    setBlock(result, csx, y, csz, (short) 89);
+                                }else if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 85);
+                                }else if (z%73==5){
+                                    setBlock(result, csx, y, csz, (short) 89);
+                                }
+                            }else if (x%10==4){
+                                if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==5){
+                                if (z%73==3){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 17);
+                                }else if (z%73==5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==6){
+                                if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                    }else if (y == 69){
+                        if (z%73>15){
+                            if (z%10==0){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 85);
+                                }
+                            }else if (z%10==3){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==4){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==5){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==6){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==7){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                        if (x%73>15){
+                            if (x%10==0){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 85);
+                                }
+                            }else if (x%10==3){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==4){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==5){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==6){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==7){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                    }else if (y == 70){
+                        if (z%73>15){
+                            if (z%10==3){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==4){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==5){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==6){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==7){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                        if (x%73>15){
+                            if (x%10==3){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==4){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==5){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==6){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==7){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                    }else if (y == 71){
+                        if (z%73>15){
+                            if (z%10==3){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==4){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==5){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==6){
+                                if (x%73>=2 && x%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==7){
+                                if (x%73>=3 && x%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                        if (x%73>15){
+                            if (x%10==3){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==4){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==5){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==6){
+                                if (z%73>=2 && z%73<=6){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==7){
+                                if (z%73>=3 && z%73<=5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                    }else if (y == 72){
+                        if (z%73>15){
+                            if (z%10==5){
+                                if (x%73==3){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (x%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (x%73==5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (z%10==6){
+                                if (x%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }
+                        }
+                        if (x%73>15){
+                            if (x%10==0){
+                                if (z%73==3){
+                                    setBlock(result, csx, y, csz, (short) 89);
+                                }else if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 85);
+                                }else if (z%73==5){
+                                    setBlock(result, csx, y, csz, (short) 89);
+                                }
+                            }else if (x%10==4){
+                                if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==5){
+                                if (z%73==3){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }else if (z%73==5){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
+                            }else if (x%10==6){
+                                if (z%73==4){
+                                    setBlock(result, csx, y, csz, (short) 18);
+                                }
                             }
                         }
                     }
