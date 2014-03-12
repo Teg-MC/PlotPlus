@@ -33,7 +33,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>9 && z%73<69 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -41,7 +41,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>9 && x%73<69 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -57,7 +57,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>9 && z%73<69 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -65,7 +65,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>9 && x%73<69 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -81,7 +81,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 setBlock(result, csx, y, csz, (short) 44);
                             }
                         }else if (x%73==4){
-                            if (z%73>9 && z%5==0){
+                            if (z%73>9 && z%73<69 && z%5==0){
                                 if (z%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -89,7 +89,7 @@ public class PlotGenerator extends ChunkGenerator {
                                 }
                             }
                         }else if (z%73==4){
-                            if (x%73>9 && x%5==0){
+                            if (x%73>9 && x%73<69 && x%5==0){
                                 if (x%10==0){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }else{
@@ -98,7 +98,7 @@ public class PlotGenerator extends ChunkGenerator {
                             }
                         }
                     }else if (y == 68){
-                        if (z%73>9){
+                        if (z%73>9 && z%73<69){
                             if (z%10==0){
                                 if (x%73==3){
                                     setBlock(result, csx, y, csz, (short) 89);
@@ -108,6 +108,7 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 89);
                                 }
                             }else if (z%10==4){
+                                if ((z+1)%73>9 && (z+1)%73<69)
                                 if (x%73==4){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
@@ -120,12 +121,12 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==6){
+                                if ((z-1)%73>9 && (z-1)%73<69)
                                 if (x%73==4){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }
-                        }
-                        if (x%73>9){
+                        }else if (x%73>9 && x%73<69){
                             if (x%10==0){
                                 if (z%73==3){
                                     setBlock(result, csx, y, csz, (short) 89);
@@ -135,6 +136,7 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 89);
                                 }
                             }else if (x%10==4){
+                                if ((x+1)%73>9 && (x+1)%73<69)
                                 if (z%73==4){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
@@ -147,22 +149,25 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==6){
+                                if ((x-1)%73>9 && (x-1)%73<69)
                                 if (z%73==4){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }
                         }
                     }else if (y == 69){
-                        if (z%73>9){
-                            if (z%10==0){
-                                if (x%73>=3 && x%73<=5){
+                        if (z%73>9 && z%73<69){
+                            if (x%10==0){
+                                if (z%73>=4 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }
                             }else if (z%10==3){
+                                if ((z+2)%73>9 && (z+2)%73<69)
                                 if (x%73>=3 && x%73<=5){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==4){
+                                if ((z+1)%73>9 && (z+1)%73<69)
                                 if (x%73>=2 && x%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
@@ -171,25 +176,29 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==6){
+                                if ((z-1)%73>9 && (z-1)%73<69)
                                 if (x%73>=2 && x%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==7){
+                                if ((z-2)%73>9 && (z-2)%73<69)
                                 if (x%73>=3 && x%73<=5){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }
                         }
-                        if (x%73>9){
+                        if (x%73>9 && x%73<69){
                             if (x%10==0){
-                                if (z%73>=3 && z%73<=5){
+                                if (z%73>=4 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 85);
                                 }
                             }else if (x%10==3){
+                                if ((x+2)%73>9 && (x+2)%73<69)
                                 if (z%73>=3 && z%73<=5){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==4){
+                                if ((x+1)%73>9 && (x+1)%73<69)
                                 if (z%73>=2 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
@@ -198,115 +207,134 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==6){
+                                if ((x-1)%73>9 && (x-1)%73<69)
                                 if (z%73>=2 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==7){
+                                if ((x-2)%73>9 && (x-2)%73<69)
                                 if (z%73>=3 && z%73<=5){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }
                         }
                     }else if (y == 70){
-                        if (z%73>9){
+                        if (z%73>9 && z%73<69){
                             if (z%10==3){
-                                if (x%73>=3 && x%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z+2)%73>9 && (z+2)%73<69)
+                                    if (x%73>=3 && x%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==4){
-                                if (x%73>=2 && x%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z+1)%73>9 && (z+1)%73<69)
+                                    if (x%73>=2 && x%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==5){
                                 if (x%73>=2 && x%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==6){
-                                if (x%73>=2 && x%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z-1)%73>9 && (z-1)%73<69)
+                                    if (x%73>=2 && x%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==7){
-                                if (x%73>=3 && x%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z-2)%73>9 && (z-2)%73<69)
+                                    if (x%73>=3 && x%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
                         }
-                        if (x%73>9){
+                        if (x%73>9 && x%73<69){
                             if (x%10==3){
-                                if (z%73>=3 && z%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x+2)%73>9 && (x+2)%73<69)
+                                    if (z%73>=3 && z%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==4){
-                                if (z%73>=2 && z%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x+1)%73>9 && (x+1)%73<69)
+                                    if (z%73>=2 && z%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==5){
                                 if (z%73>=2 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==6){
-                                if (z%73>=2 && z%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x-1)%73>9 && (x-1)%73<69)
+                                    if (z%73>=2 && z%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==7){
-                                if (z%73>=3 && z%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x-2)%73>9 && (x-2)%73<69)
+                                    if (z%73>=3 && z%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
                         }
                     }else if (y == 71){
-                        if (z%73>9){
+                        if (z%73>9 && z%73<69){
                             if (z%10==3){
-                                if (x%73>=3 && x%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z+2)%73>9 && (z+2)%73<69)
+                                    if (x%73>=3 && x%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==4){
-                                if (x%73>=2 && x%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z+1)%73>9 && (z+1)%73<69)
+                                    if (x%73>=2 && x%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==5){
                                 if (x%73>=2 && x%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==6){
-                                if (x%73>=2 && x%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z-1)%73>9 && (z-1)%73<69)
+                                    if (x%73>=2 && x%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==7){
-                                if (x%73>=3 && x%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z-2)%73>9 && (z-2)%73<69)
+                                    if (x%73>=3 && x%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
                         }
-                        if (x%73>9){
+                        if (x%73>9 && x%73<69){
                             if (x%10==3){
-                                if (z%73>=3 && z%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x+2)%73>9 && (x+2)%73<69)
+                                    if (z%73>=3 && z%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==4){
-                                if (z%73>=2 && z%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x+1)%73>9 && (x+1)%73<69)
+                                    if (z%73>=2 && z%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==5){
                                 if (z%73>=2 && z%73<=6){
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==6){
-                                if (z%73>=2 && z%73<=6){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x-1)%73>9 && (x-1)%73<69)
+                                    if (z%73>=2 && z%73<=6){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==7){
-                                if (z%73>=3 && z%73<=5){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x-2)%73>9 && (x-2)%73<69)
+                                    if (z%73>=3 && z%73<=5){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
                         }
                     }else if (y == 72){
-                        if (z%73>9){
-                            if (x%10==4){
-                                if (z%73==4){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                        if (z%73>9 && z%73<69){
+                            if (z%10==4){
+                                if ((z+1)%73>9 && (z+1)%73<69)
+                                    if (x%73==4){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (z%10==5){
                                 if (x%73==3){
                                     setBlock(result, csx, y, csz, (short) 18);
@@ -316,16 +344,17 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (z%10==6){
-                                if (x%73==4){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((z-1)%73>9 && (z-1)%73<69)
+                                    if (x%73==4){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
-                        }
-                        if (x%73>9){
+                        }else if (x%73>9 && x%73<69){
                             if (x%10==4){
-                                if (z%73==4){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x+1)%73>9 && (x+1)%73<69)
+                                    if (z%73==4){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }else if (x%10==5){
                                 if (z%73==3){
                                     setBlock(result, csx, y, csz, (short) 18);
@@ -335,9 +364,10 @@ public class PlotGenerator extends ChunkGenerator {
                                     setBlock(result, csx, y, csz, (short) 18);
                                 }
                             }else if (x%10==6){
-                                if (z%73==4){
-                                    setBlock(result, csx, y, csz, (short) 18);
-                                }
+                                if ((x-1)%73>9 && (x-1)%73<69)
+                                    if (z%73==4){
+                                        setBlock(result, csx, y, csz, (short) 18);
+                                    }
                             }
                         }
                     }
